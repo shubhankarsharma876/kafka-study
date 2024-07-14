@@ -1,0 +1,25 @@
+To on the zookeeper
+go to the software and then redirect to the kafka then in the cmd type this
+
+-> bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+To Make the Kafka running
+go to the software and then redirect to the kafka then in the cmd type this
+
+-> bin\windows\kafka-server-start.bat .\config\server.properties
+
+
+To create the topic
+
+-> kafka-topics.bat --create --bootstrap-server localhost:9092 --topic test
+
+
+To create the producer
+
+->kafka-console-producer.bat --broker-list localhost:9092 --topic test
+
+then you can provide the data you want to parse
+
+To Crete the customer
+
+->kafka-console-consumer.bat --topic test --bootstrap-server localhost:9092 --from-beginning
